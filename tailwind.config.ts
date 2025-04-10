@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				solana: {
+					purple: '#9945FF',
+					green: '#14F195',
+					darkblue: '#1E1E32',
+					dark: '#0C0C14'
 				}
 			},
 			borderRadius: {
@@ -84,11 +91,29 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				'gradient-flow': {
+					'0%, 100%': { 
+						backgroundPosition: '0% 50%',
+					},
+					'50%': { 
+						backgroundPosition: '100% 50%',
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s infinite',
+				'gradient-flow': 'gradient-flow 5s ease infinite'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'solana-gradient': 'linear-gradient(to right, #9945FF, #14F195)',
 			}
 		}
 	},
